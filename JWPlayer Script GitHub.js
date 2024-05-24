@@ -24,6 +24,26 @@ var jwDefaults = {
   "preload": "metadata",
   "repeat": false,
   "stretching": "uniform",
-  "width": "100%"
+  "width": "100%",
+  "sources": [
+    {
+      "file": "https://path/to/video-1080p.mp4",
+      "label": "1080p",
+      "default": true
+    },
+    {
+      "file": "https://path/to/video-720p.mp4",
+      "label": "720p"
+    },
+    {
+      "file": "https://path/to/video-480p.mp4",
+      "label": "480p"
+    }
+  ],
+  "qualityLabel": "Quality"
+};
+
+// Initialize the player
+jwplayer("player").setup(jwDefaults);
 };
 jwplayer.defaults = jwDefaults;
