@@ -45,5 +45,3 @@ var jwDefaults = {
 
 // Initialize the player
 jwplayer("player").setup(jwDefaults);
-};
-jwplayer.defaults = jwDefaults;
