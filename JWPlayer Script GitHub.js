@@ -11,16 +11,16 @@
 
 var jwDefaults = {
   "aspectratio": "16:9",
-  "autostart": true,
+  "autostart": false,
   "controls": true,
   "displaydescription": true,
   "displaytitle": true,
   "height": 260,
   "key": "64HPbvSQorQcd52B8XFuhMtEoitbvY/EXJmMBfKcXZQU2Rnn",
-  "mute": true,
+  "mute": false,
   "ph": 1,
   "pid": "IDzF9Zmk",
-  "playbackRateControls": false,
+  "playbackRateControls": true,
   "preload": "metadata",
   "repeat": false,
   "stretching": "uniform",
@@ -40,8 +40,27 @@ var jwDefaults = {
       "label": "480p"
     }
   ],
+  "tracks": [
+    {
+      "file": "https://path/to/captions.vtt",
+      "label": "English",
+      "kind": "captions",
+      "default": true
+    }
+  ],
+  "thumbnails": {
+    "interval": 10, // Generate thumbnails every 10 seconds
+    "prefix": "https://path/to/thumbnails/thumb-", // Thumbnail image URL prefix
+    "suffix": ".jpg" // Thumbnail image URL suffix
+  },
+  "skin": {
+    "name": "custom",
+    "url": "https://path/to/custom-skin.css"
+  },
   "qualityLabel": "Quality"
 };
+
+jwplayer.defaults = jwDefaults;
 
 // Initialize the player
 jwplayer("player").setup(jwDefaults);
