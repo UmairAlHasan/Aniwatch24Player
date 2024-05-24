@@ -11,7 +11,7 @@
 
 var jwDefaults = {
   "aspectratio": "16:9",
-  "autostart": false,
+  "autostart": true,
   "controls": true,
   "displaydescription": true,
   "displaytitle": true,
@@ -20,47 +20,10 @@ var jwDefaults = {
   "mute": false,
   "ph": 1,
   "pid": "IDzF9Zmk",
-  "playbackRateControls": true,
+  "playbackRateControls": false,
   "preload": "metadata",
   "repeat": false,
   "stretching": "uniform",
-  "width": "100%",
-  "sources": [
-    {
-      "file": "https://path/to/video-1080p.mp4",
-      "label": "1080p",
-      "default": true
-    },
-    {
-      "file": "https://path/to/video-720p.mp4",
-      "label": "720p"
-    },
-    {
-      "file": "https://path/to/video-480p.mp4",
-      "label": "480p"
-    }
-  ],
-  "tracks": [
-    {
-      "file": "https://path/to/captions.vtt",
-      "label": "English",
-      "kind": "captions",
-      "default": true
-    }
-  ],
-  "thumbnails": {
-    "interval": 10, // Generate thumbnails every 10 seconds
-    "prefix": "https://path/to/thumbnails/thumb-", // Thumbnail image URL prefix
-    "suffix": ".jpg" // Thumbnail image URL suffix
-  },
-  "skin": {
-    "name": "custom",
-    "url": "https://path/to/custom-skin.css"
-  },
-  "qualityLabel": "Quality"
+  "width": "100%"
 };
-
 jwplayer.defaults = jwDefaults;
-
-// Initialize the player
-jwplayer("player").setup(jwDefaults);
