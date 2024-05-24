@@ -17,12 +17,12 @@ var jwDefaults = {
   "displaytitle": true,
   "height": 260,
   "key": "64HPbvSQorQcd52B8XFuhMtEoitbvY/EXJmMBfKcXZQU2Rnn",
-  "mute": false,
+  "mute": true,
   "ph": 1,
   "pid": "IDzF9Zmk",
   "playbackRateControls": false,
   "preload": "metadata",
-  "repeat": false,
+  "repeat": true,
   "stretching": "uniform",
   "width": "100%"
 };
