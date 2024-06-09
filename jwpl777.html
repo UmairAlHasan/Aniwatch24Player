@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JW Player 9 Example</title>
     <!-- Include JW Player library -->
-    <script src="https://raw.githack.com/Killer-GR/PlayerCode/main/DooPlay%20Licenkey.js"></script>
+    <script src="https://cdn.jwplayer.com/libraries/your_jwplayer_key.js"></script>
 </head>
 <body>
     <!-- Place the player container -->
@@ -36,6 +36,7 @@
                 { file: "subtitle3.vtt", label: "Urdu", kind: "captions" }
                 // Add more subtitle tracks as needed
             ],
+            playbackRateControls: true, // Enable playback speed controls
             playbackRates: [0.5, 1, 1.25, 1.5, 2], // Add playback speed options
             audioTracks: [
                 { file: "audio1.mp3", label: "English" },
