@@ -32,8 +32,15 @@
             autostart: true, // Set to true if you want the video to autoplay
             tracks: [
                 { file: "path/to/subtitle1.vtt", label: "English", kind: "captions" },
-                { file: "path/to/subtitle2.vtt", label: "Spanish", kind: "captions" }
+                { file: "path/to/subtitle2.vtt", label: "Hindi", kind: "captions" },
+                { file: "path/to/subtitle3.vtt", label: "Urdu", kind: "captions" }
                 // Add more subtitle tracks as needed
+            ],
+            audioTracks: [
+                { file: "path/to/english-audio.mp3", label: "English" },
+                { file: "path/to/hindi-audio.mp3", label: "Hindi" },
+                { file: "path/to/urdu-audio.mp3", label: "Urdu" }
+                // Add more audio tracks as needed
             ]
             // Add more configuration options as needed
         });
