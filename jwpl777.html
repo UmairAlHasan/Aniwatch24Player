@@ -25,26 +25,46 @@
                 { file: "https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4", label: "360p", type: "mp4" },
                 { file: "https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4", label: "240p", type: "mp4" },
                 { file: "https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4", label: "144p", type: "mp4" }
-                // Add more sources for different quality levels as needed
             ],
             width: "100%",
             aspectratio: "16:9",
-            autostart: true, // Set to true if you want the video to autoplay
+            autostart: true,
             tracks: [
                 { file: "subtitle1.vtt", label: "English", kind: "captions" },
                 { file: "subtitle2.vtt", label: "Hindi", kind: "captions" },
                 { file: "subtitle3.vtt", label: "Urdu", kind: "captions" }
-                // Add more subtitle tracks as needed
             ],
-            playbackRateControls: true, // Enable playback speed controls
-            playbackRates: [0.5, 1, 1.25, 1.5, 2], // Add playback speed options
+            playbackRateControls: true,
+            playbackRates: [0.5, 1, 1.25, 1.5, 2],
             audioTracks: [
                 { file: "audio1.mp3", label: "English" },
                 { file: "audio2.mp3", label: "Hindi" },
                 { file: "audio3.mp3", label: "Urdu" }
-                // Add more audio tracks as needed
-            ]
-            // Add more configuration options as needed
+            ],
+            advertising: {
+                client: "vast",
+                schedule: {
+                    adbreak1: {
+                        offset: "pre",
+                        tag: "https://path.to/adtag.xml"
+                    }
+                }
+            },
+            sharing: {
+                link: "https://yourwebsite.com/video",
+                heading: "Share this video",
+                sites: ["facebook", "twitter", "linkedin", "pinterest", "email"]
+            },
+            related: {
+                file: "https://yourwebsite.com/related.json",
+                oncomplete: "show"
+            },
+            captions: {
+                color: "#FFFFFF",
+                fontSize: 14,
+                backgroundOpacity: 0,
+                edgeStyle: "raised"
+            }
         });
     </script>
 </body>
