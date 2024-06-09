@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW Player 9 Example</title>
+    <!-- Include JW Player library -->
+    <script src="https://raw.githack.com/Killer-GR/PlayerCode/main/DooPlay%20Licenkey.js"></script>
+</head>
+<body>
+    <!-- Place the player container -->
+    <div id="myPlayer"></div>
+
+<script>
+        // Set up JW Player configuration
+        var player = jwplayer("myPlayer").setup({
+            file: "https://bigf.bigo.sg/asia_live/V4s7/0TXF6d.mp4", // Replace with your video URL
+            width: "100%",
+            aspectratio: "16:9",
+            autostart: true, // Set to true if you want the video to autoplay
+            tracks: [
+                { file: "path/to/subtitle1.vtt", label: "English", kind: "captions" },
+                { file: "path/to/subtitle2.vtt", label: "Spanish", kind: "captions" }
+                // Add more subtitle tracks as needed
+            ],
+            // Add more configuration options as needed
+        });
+    </script>
+</body>
+</html>
