@@ -11,18 +11,23 @@
     <!-- Place the player container -->
     <div id="myPlayer"></div>
 
-<script>
+    <script>
         // Set up JW Player configuration
         var player = jwplayer("myPlayer").setup({
-            file: "https://bigf.bigo.sg/asia_live/V4s7/0TXF6d.mp4", // Replace with your video URL
+            sources: [
+                { file: "https://bigf.bigo.sg/asia_live/V4s7/0TXF6d_720p.mp4", label: "720p", type: "mp4" },
+                { file: "https://bigf.bigo.sg/asia_live/V4s7/0TXF6d_480p.mp4", label: "480p", type: "mp4" },
+                { file: "https://bigf.bigo.sg/asia_live/V4s7/0TXF6d_360p.mp4", label: "360p", type: "mp4" }
+                // Add more sources for different quality levels as needed
+            ],
             width: "100%",
             aspectratio: "16:9",
             autostart: true, // Set to true if you want the video to autoplay
             tracks: [
-                { file: "https://res.cloudinary.com/dzu8cjasr/raw/upload/v1717919707/English_Aniwatch24_Viral_Hit_Season_1_Episode_1_1080p.mp4_DownSub.com_whfyuo.srt", label: "English", kind: "captions" },
+                { file: "path/to/subtitle1.vtt", label: "English", kind: "captions" },
                 { file: "path/to/subtitle2.vtt", label: "Spanish", kind: "captions" }
                 // Add more subtitle tracks as needed
-            ],
+            ]
             // Add more configuration options as needed
         });
     </script>
