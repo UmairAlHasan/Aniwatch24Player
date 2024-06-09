@@ -31,15 +31,16 @@
             aspectratio: "16:9",
             autostart: true, // Set to true if you want the video to autoplay
             tracks: [
-                { file: "path/to/subtitle1.vtt", label: "English", kind: "captions" },
-                { file: "path/to/subtitle2.vtt", label: "Hindi", kind: "captions" },
-                { file: "path/to/subtitle3.vtt", label: "Urdu", kind: "captions" }
+                { file: "subtitle1.vtt", label: "English", kind: "captions" },
+                { file: "subtitle2.vtt", label: "Hindi", kind: "captions" },
+                { file: "subtitle3.vtt", label: "Urdu", kind: "captions" }
                 // Add more subtitle tracks as needed
             ],
+            playbackRates: [0.5, 1, 1.25, 1.5, 2], // Add playback speed options
             audioTracks: [
-                { file: "https://www.udrop.com/file/LLni/1p_-_ep892_hindi.mp3", label: "English" },
-                { file: "https://www.udrop.com/file/LLni/1p_-_ep892_hindi.mp3", label: "Hindi" },
-                { file: "https://www.udrop.com/file/LLni/1p_-_ep892_hindi.mp3", label: "Urdu" }
+                { file: "audio1.mp3", label: "English" },
+                { file: "audio2.mp3", label: "Hindi" },
+                { file: "audio3.mp3", label: "Urdu" }
                 // Add more audio tracks as needed
             ]
             // Add more configuration options as needed
