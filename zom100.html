@@ -86,16 +86,6 @@
           label: "360p"
         }],
 	    
-	tracks: [
-          { file: "https://example.com/audio/track1.mp3",
-	   label: "English",
-	   kind: "audio",
-	   default: true 
-	  },
-          { file: "https://example.com/audio/track2.mp3",
-	   label: "Spanish"
-	  }],
-	    
         captions: [
         {file:"https://firebasestorage.googleapis.com/v0/b/view-counter-ar.appspot.com/o/%5BEnglish%5D%20%5BAniwatch24%5D%20Viral%20Hit%20Season%201%20Episode%201%201080p.mp4%20%5BDownSub.com%5D.srt?alt=media&token=537e8899-27b1-4ffd-bf75-b9de531aa101",
 
@@ -160,31 +150,7 @@ playerInstance.on("ready", function () {
     button.onclick = () => {     playerInstance.seek(playerInstance.getPosition() + 10);
     };
   });
-});
- const playerInstance = jwplayer("player").setup({
-  // other player setup options
-});
-
-playerInstance.on('ready', function() {
-  const audioTracks = playerInstance.getPlaylistItem().sources[0].tracks;
-  const audioTrackSelect = document.createElement('select');
-
-  audioTracks.forEach(track => {
-    const option = document.createElement('option');
-    option.value = track.file;
-    option.text = track.label;
-    audioTrackSelect.appendChild(option);
-  });
-
-  audioTrackSelect.addEventListener('change', function() {
-    const selectedIndex = this.selectedIndex;
-    playerInstance.setCaptions({ file: audioTracks[selectedIndex].file });
-  });
-
-  const controlBar = playerInstance.getContainer().querySelector('.jw-controlbar-right-group');
-  controlBar.appendChild(audioTrackSelect);
-});
-	
+});	
 </script>
 </body>
 </html>
