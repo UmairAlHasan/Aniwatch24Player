@@ -56,29 +56,36 @@
   playlist: [
     {
       title: "Aniwatch24",
-      description: "Aniwatch24",
+      description: "You're Watching",
       image: "",
       sources: [
       {
           file:
-          "https://www.udrop.com/file/LLiE/Kaiju_No._8_Season_1_Episode_1.mp4",
+          "",
           label: "Auto",
           default: true
         },
         {
           file:
-            "https://www.udrop.com/file/LLiE/Kaiju_No._8_Season_1_Episode_1.mp4",
+            "",
           label: "1080p"
         },
         {
           file:
-            "https://www.udrop.com/file/LLiE/Kaiju_No._8_Season_1_Episode_1.mp4",
+            "",
           label: "720p"
         },
         {
           file:
-            "https://www.udrop.com/file/LLiE/Kaiju_No._8_Season_1_Episode_1.mp4",
+            "",
           label: "480p"
+        }],
+        captions: [
+        {file:"https://firebasestorage.googleapis.com/v0/b/view-counter-ar.appspot.com/o/%5BEnglish%5D%20%5BAniwatch24%5D%20Viral%20Hit%20Season%201%20Episode%201%201080p.mp4%20%5BDownSub.com%5D.srt?alt=media&token=537e8899-27b1-4ffd-bf75-b9de531aa101",
+
+          label: "English",
+          kind: "captions",
+          default: true
         }],
     }
   ],
@@ -107,7 +114,6 @@
                         },
                     },
                 },
-
 });
 playerInstance.on("ready", function () {
   const buttonId = "download-video-button";
