@@ -24,17 +24,10 @@
             aspectratio: "16:9",
             autostart: true,
             tracks: [
-                { file: "subtitle1.vtt", label: "English", kind: "captions", "default": true },
-                { file: "subtitle2.vtt", label: "Hindi", kind: "captions" },
-                { file: "subtitle3.vtt", label: "Urdu", kind: "captions" }
+                { file: "subtitle1.vtt", label: "English", kind: "captions", "default": true }
             ],
             playbackRateControls: true,
             playbackRates: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
-            audioTracks: [
-                { file: "audio1.mp4", label: "English" },
-                { file: "audio2.mp4", label: "Hindi" },
-                { file: "audio3.mp4", label: "Urdu" }
-            ],
             advertising: {
                 client: "vast",
                 skipoffset: 10,
@@ -43,7 +36,7 @@
                 admessage: "The video ends in XX .",
                     schedule: {
                         adbreak1: {
-                            offset: "05",
+                            offset: "pre",
                             tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/16575d1807e393aa31e09fecf0a9ccd81f1645ad/Ads777.xml"
                         },
                         adbreak2: {
@@ -51,7 +44,7 @@
                             tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/16575d1807e393aa31e09fecf0a9ccd81f1645ad/Ads777.xml"
                         },
                         adbreak3: {
-                            offset: "500",
+                            offset: "900",
                             tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/16575d1807e393aa31e09fecf0a9ccd81f1645ad/Ads777.xml"
                         },
                         adbreak4: {
