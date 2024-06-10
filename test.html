@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniwatch24</title>
+    <!-- Include JW Player library -->
+    <script src="https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/07e5ad1e3fbef12956ef51c571ed2e38a6927c81/JWPlayer%20Script%20GitHub.js"></script>
+</head>
+<body>
+    <!-- Place the player container -->
+    <div id="myPlayer"></div>
+
+    <script>
+        // Set up JW Player configuration
+        var player = jwplayer("myPlayer").setup({
+            sources: [
+                { file: "https://www.udrop.com/file/LLwM/[Toonworld4all]_My_Hero_Academia_S04E27_OVA_2_720p_HD_WEB-DL_Multi_Audio_ESub.mkv", label: "Auto", type: "mp4" },
+                { file: "https://www.udrop.com/file/LLwM/[Toonworld4all]_My_Hero_Academia_S04E27_OVA_2_720p_HD_WEB-DL_Multi_Audio_ESub.mkv", label: "1080p", type: "mp4" },
+                { file: "https://www.udrop.com/file/LLwM/[Toonworld4all]_My_Hero_Academia_S04E27_OVA_2_720p_HD_WEB-DL_Multi_Audio_ESub.mkv", label: "720p", type: "mp4" },
+                { file: "https://www.udrop.com/file/LLwM/[Toonworld4all]_My_Hero_Academia_S04E27_OVA_2_720p_HD_WEB-DL_Multi_Audio_ESub.mkv", label: "480p", type: "mp4" }
+            ],
+            width: "100%",
+            aspectratio: "16:9",
+            autostart: true,
+            playbackRateControls: true,
+            playbackRates: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+            advertising: {
+                client: "vast",
+                skipoffset: 10,
+                skiptext: "Skip",
+                skipmessage: "Skip this video in  XX",
+                admessage: "The video ends in XX .",
+                    schedule: {
+                        adbreak1: {
+                            offset: "pre",
+                            tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/b520292f1d7ae60c46934969aad4845e3675f15c/Crunchyroll%20Ad.xml"
+                        },
+                        adbreak2: {
+                            offset: "300",
+                            tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/b520292f1d7ae60c46934969aad4845e3675f15c/Coca%20Cola%20Ad.xml"
+                        },
+                        adbreak3: {
+                            offset: "900",
+                            tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/b520292f1d7ae60c46934969aad4845e3675f15c/Coca%20Cola%20Ad.xml"
+                        },
+                        adbreak4: {
+                            offset: "post",
+                            tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/b520292f1d7ae60c46934969aad4845e3675f15c/Crunchyroll%20Ad.xml"
+                        },
+                    },
+                },
+            sharing: {
+                link: "https://aniwatch24.xyz",
+                heading: "Share this video",
+                sites: ["facebook", "twitter"]
+            },
+            related: {
+                file: "https://aniwatch24.xyz/related.json",
+                oncomplete: "show"
+            },
+            captions: {
+                color: "#FFFFFF",
+                fontSize: 12,
+                backgroundOpacity: 0,
+                edgeStyle: "raised"
+            }
+        });
+    </script>
+</body>
+</html>
