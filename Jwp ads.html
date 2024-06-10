@@ -1,55 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>JW Player Enhanced Setup</title>
-</head>
-<body>
-    <!-- JW8 !-->
-    <script src="https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/07e5ad1e3fbef12956ef51c571ed2e38a6927c81/JWPlayer%20Script%20GitHub.js"></script>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+	    
+<!-- JW8 !-->
+<script src="https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/07e5ad1e3fbef12956ef51c571ed2e38a6927c81/JWPlayer%20Script%20GitHub.js"></script>
 
-    <script type="text/javascript">jwplayer.key = "your-license-key";</script>
 
-    <div id="plays" style="margin-top: 25%; text-align: center; font-family: arial,sans-serif; font-size: 18px; color: #ffff; text-shadow: 0 1px 1px #000;">....</div>
-    <script type="text/javascript">
-        var playerInstance = jwplayer("plays");
-        playerInstance.setup({
-            playlist: [{
-                sources: [
-                    {file: "https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4", label: "360p", "default": true, type: "video/mp4"},
-                    {file: "https://cdn.jwplayer.com/videos/q1fx20VZ-DZ7jSYgM.mp4", label: "480p", type: "video/mp4"},
-                    {file: "https://cdn.jwplayer.com/videos/q1fx20VZ-DZ7jSYgM.mp4", label: "720p", type: "video/mp4"}
-                ],
-                tracks: [
-                    {file: "https://example.com/subtitles/english.vtt", label: "English", kind: "captions", "default": true},
-                    {file: "https://example.com/subtitles/spanish.vtt", label: "Spanish", kind: "captions"}
-                ],
-                audioTracks: [
-                    {file: "https://example.com/audio/english-audio.mp4", label: "English", "default": true},
-                    {file: "https://example.com/audio/spanish-audio.mp4", label: "Spanish"}
-                ],
+<script type="text/javascript">jwplayer.key = "Rj7tDuYSCqZdNKNAqsjWoMDBdHhp1THggDFOUhr0Zj8=";</script>
+<script type="text/javascript">jwplayer.key="eNFaXCjyURVoCCGiHp7HTQ3hDhE/AfL0g8VE1fRbL84=";</script>
+
+
+<div id="plays" style="margin-top: 25%; text-align: center; font-family: arial,sans-serif; font-size: 18px; color: #ffff; text-shadow: 0 1px 1px #000;">....</div>
+<script type="text/javascript">
+playerInstance = jwplayer("plays");
+playerInstance.setup({
+    sources:[{file:"https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4",label:"360p","default": "true",type:"video/mp4"},{file:"https://cdn.jwplayer.com/videos/q1fx20VZ-DZ7jSYgM.mp4",label:"480p",type:"video/mp4"},{file:"https://cdn.jwplayer.com/videos/q1fx20VZ-DZ7jSYgM.mp4",label:"720p",type:"video/mp4"}],height:"100%",width:"100%",
                 advertising: {
-                    client: "vast",
-                    skipoffset: 5,
-                    skiptext: "Skip",
-                    skipmessage: "Skip this ad in XX",
-                    admessage: "The video will resume in XX.",
-                    schedule: [
-                        {offset: "pre", tag: "https://example.com/ad/pre-roll.xml"},
-                        {offset: "10", tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/16575d1807e393aa31e09fecf0a9ccd81f1645ad/Ads777.xml"},
-                        {offset: "300", tag: "https://example.com/ad/mid-roll.xml"},
-                        {offset: "post", tag: "https://example.com/ad/post-roll.xml"}
-                    ]
+                client: "vast",
+                skipoffset: 5,
+                skiptext: "Skip",
+                skipmessage: "Skip this video in  XX",
+                admessage: "The video ends in XX .",
+                    schedule: {
+                        adbreak1: {
+                            offset: "10",
+                            tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/16575d1807e393aa31e09fecf0a9ccd81f1645ad/Ads777.xml"
+                        },
+                        adbreak2: {
+                            offset: "300",
+                            tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/16575d1807e393aa31e09fecf0a9ccd81f1645ad/Ads777.xml"
+                        }
+                    }
                 }
-            }],
-            height: "100%",
-            width: "100%",
-            controls: true,
-            autostart: true,
-            playbackRateControls: [0.25, 0.5, 0.75, 1, 1.5, 1.75, 2],
-            cast: {
-                appid: "your-chromecast-app-id"
-            }
-        });
-    </script>
-</body>
+});
+		</script>
+
+
+
+	</body>
 </html>
