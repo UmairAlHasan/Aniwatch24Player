@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+	    
+<!-- JW8 !-->
+<script src="https://content.jwplatform.com/libraries/IDzF9Zmk.js"></script>
+
+
+<script type="text/javascript">jwplayer.key = "Rj7tDuYSCqZdNKNAqsjWoMDBdHhp1THggDFOUhr0Zj8=";</script>
+<script type="text/javascript">jwplayer.key="eNFaXCjyURVoCCGiHp7HTQ3hDhE/AfL0g8VE1fRbL84=";</script>
+
+
+<div id="plays" style="margin-top: 25%; text-align: center; font-family: arial,sans-serif; font-size: 18px; color: #ffff; text-shadow: 0 1px 1px #000;">....</div>
+<script type="text/javascript">
+playerInstance = jwplayer("plays");
+playerInstance.setup({
+    sources:[{file:"https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4",label:"360p","default": "true",type:"video/mp4"},{file:"https://cdn.jwplayer.com/videos/q1fx20VZ-DZ7jSYgM.mp4",label:"480p",type:"video/mp4"},{file:"https://cdn.jwplayer.com/videos/q1fx20VZ-DZ7jSYgM.mp4",label:"720p",type:"video/mp4"}],height:"100%",width:"100%",
+                advertising: {
+                    client: "vast",
+                skiptext: "ข้าม",
+                skipmessage: "ข้ามวีดีโอนี้ใน  XX",
+                admessage: "วีดีโอสิ้นสุดใน XX .",
+                    schedule: {
+                        adbreak1: {
+                            offset: "30",
+                            tag: "https://raw.githubusercontent.com/jwplayer/jwdeveloper-demos/master/demos/innovation/video-ad-scheduling/assets/preroll.xml"
+                        },
+                        adbreak2: {
+                            offset: "60",
+                            tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/288c235e74a495ca27c0e0fce9d750c4877c1bdd/Ads777.xml"
+                        }
+                    }
+                }
+});
+		</script>
+
+
+
+	</body>
+</html>
