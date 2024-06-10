@@ -1,24 +1,41 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Page Title</title>
-	</head>
-	<body>
-	    
-<!-- JW8 !-->
-<script src="https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/07e5ad1e3fbef12956ef51c571ed2e38a6927c81/JWPlayer%20Script%20GitHub.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW Player 9 Example</title>
+    <!-- Include JW Player library -->
+    <script src="https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/07e5ad1e3fbef12956ef51c571ed2e38a6927c81/JWPlayer%20Script%20GitHub.js"></script>
+</head>
+<body>
+    <!-- Place the player container -->
+    <div id="myPlayer"></div>
 
-
-<script type="text/javascript">jwplayer.key = "Rj7tDuYSCqZdNKNAqsjWoMDBdHhp1THggDFOUhr0Zj8=";</script>
-<script type="text/javascript">jwplayer.key="eNFaXCjyURVoCCGiHp7HTQ3hDhE/AfL0g8VE1fRbL84=";</script>
-
-
-<div id="plays" style="margin-top: 25%; text-align: center; font-family: arial,sans-serif; font-size: 18px; color: #ffff; text-shadow: 0 1px 1px #000;">....</div>
-<script type="text/javascript">
-playerInstance = jwplayer("plays");
-playerInstance.setup({
-    sources:[{file:"https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4",label:"360p","default": "true",type:"video/mp4"},{file:"https://cdn.jwplayer.com/videos/q1fx20VZ-DZ7jSYgM.mp4",label:"480p",type:"video/mp4"},{file:"https://cdn.jwplayer.com/videos/q1fx20VZ-DZ7jSYgM.mp4",label:"720p",type:"video/mp4"}],height:"100%",width:"100%",
-                advertising: {
+    <script>
+        // Set up JW Player configuration
+        var player = jwplayer("myPlayer").setup({
+            sources: [
+                { file: "https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4", label: "Auto", type: "mp4" },
+                { file: "https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4", label: "1080p", type: "mp4" },
+                { file: "https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4", label: "720p", type: "mp4" },
+                { file: "https://www.udrop.com/file/LLna/Wind_Breaker_Sub_Ep1.mp4", label: "480p", type: "mp4" }
+            ],
+            width: "100%",
+            aspectratio: "16:9",
+            autostart: true,
+            tracks: [
+                { file: "subtitle1.vtt", label: "English", kind: "captions", "default": true },
+                { file: "subtitle2.vtt", label: "Hindi", kind: "captions" },
+                { file: "subtitle3.vtt", label: "Urdu", kind: "captions" }
+            ],
+            playbackRateControls: true,
+            playbackRates: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+            audioTracks: [
+                { file: "audio1.mp4", label: "English" },
+                { file: "audio2.mp4", label: "Hindi" },
+                { file: "audio3.mp4", label: "Urdu" }
+            ],
+            advertising: {
                 client: "vast",
                 skipoffset: 5,
                 skiptext: "Skip",
@@ -26,19 +43,39 @@ playerInstance.setup({
                 admessage: "The video ends in XX .",
                     schedule: {
                         adbreak1: {
-                            offset: "10",
+                            offset: "01",
                             tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/16575d1807e393aa31e09fecf0a9ccd81f1645ad/Ads777.xml"
                         },
                         adbreak2: {
                             offset: "300",
                             tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/16575d1807e393aa31e09fecf0a9ccd81f1645ad/Ads777.xml"
                         }
+                        adbreak3: {
+                            offset: "500",
+                            tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/16575d1807e393aa31e09fecf0a9ccd81f1645ad/Ads777.xml"
+                        }
+                        adbreak4: {
+                            offset: "post",
+                            tag: "https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/16575d1807e393aa31e09fecf0a9ccd81f1645ad/Ads777.xml"
+                        }
                     }
-                }
-});
-		</script>
-
-
-
-	</body>
+                },
+            sharing: {
+                link: "https://aniwatch24.xyz",
+                heading: "Share this video",
+                sites: ["facebook", "twitter"]
+            },
+            related: {
+                file: "https://aniwatch24.xyz/related.json",
+                oncomplete: "show"
+            },
+            captions: {
+                color: "#FFFFFF",
+                fontSize: 12,
+                backgroundOpacity: 0,
+                edgeStyle: "raised"
+            }
+        });
+    </script>
+</body>
 </html>
