@@ -12,7 +12,7 @@
 <Creatives>
 <Creative sequence="1" AdID="">
 <Linear>
-<Duration>00:00:15</Duration>
+<Duration>00:00:00</Duration>
 <TrackingEvents>
 <Tracking event="start">//qa.jwplayer.com/~alex/pixel.gif?1</Tracking>
 <Tracking event="impression">//qa.jwplayer.com/~alex/pixel.gif?2</Tracking>
@@ -35,10 +35,10 @@
 </VideoClicks>
 <MediaFiles>
 <MediaFile id="2" delivery="progressive" type="video/mp4" bitrate="0" width="640" height="360">
-<![CDATA[ https://www.udrop.com/file/LLiE/Kaiju_No._8_Season_1_Episode_1.mp4 ]]>
+<![CDATA[ https://firebasestorage.googleapis.com/v0/b/view-counter-ar.appspot.com/o/Coca%20Cola%20Ad.mp4?alt=media&token=e557e62c-5944-4029-99de-b4399f03790c ]]>
 </MediaFile>
 <MediaFile id="1" delivery="progressive" type="video/mp4" bitrate="0" width="640" height="360">
-<![CDATA[ https://www.udrop.com/file/LLiE/Kaiju_No._8_Season_1_Episode_1.mp4 ]]>
+<![CDATA[ https://firebasestorage.googleapis.com/v0/b/view-counter-ar.appspot.com/o/Coca%20Cola%20Ad.mp4?alt=media&token=e557e62c-5944-4029-99de-b4399f03790c ]]>
 </MediaFile>
 </MediaFiles>
 </Linear>
