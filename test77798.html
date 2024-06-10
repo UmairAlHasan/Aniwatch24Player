@@ -24,23 +24,15 @@
             aspectratio: "16:9",
             autostart: true,
             tracks: [
-                { file: "subtitle1.srt", label: "English", kind: "captions", "default": true},
-                { file: "subtitle1.srt", label: "Arabic", kind: "captions"},
-                { file: "subtitle1.srt", label: "Hindi", kind: "captions"}
-                
+                { file: "subtitle1.srt", label: "English", kind: "captions", "default": true}  
             ],
             playbackRateControls: true,
             playbackRates: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
-            audioTracks: [
-                { file: "audio1.mp3", label: "English" },
-                { file: "audio1.mp3", label: "Hindi" },
-                { file: "audio1.mp3", label: "Japanese" }
-            ],
             advertising: {
                 client: "vast",
                 schedule: {
                     adbreak1: {
-                        offset: "pre",
+                        offset: "500",
                         tag: "https://path.to/adtag.xml"
                     }
                 }
@@ -48,7 +40,7 @@
             sharing: {
                 link: "https://aniwatch24.xyz",
                 heading: "Share this video",
-                sites: ["facebook", "twitter", "whatsapp"]
+                sites: ["facebook", "twitter"]
             },
             related: {
                 file: "https://aniwatch24.xyz/related.json",
