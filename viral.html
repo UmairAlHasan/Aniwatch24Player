@@ -1,116 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="km">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniwatch24</title>
-    <!-- JW Player Stylesheet -->
-    <link href="https://rawcdn.githack.com/UmairAlHasan/Aniwatch24Player/b13b16ef0102da3a7c07aae9a482ad11c6ea7266/Ryuk%20Player%20Skin.css" rel="stylesheet">
-    <!-- Custom Styles -->
+  <head>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Hide overflow to prevent scrollbars */
-            position: relative;
-        }
-        #player {
-            width: 100%;
-            height: 100vh; /* Full viewport height */
-        }
-        #download-video-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #download-video-button:hover {
-            background-color: #2980b9;
-        }
-    </style>
-</head>
+     img {
+       position: absolute;
+       top: 30px;
+       right: 30px;
+       width: 100px;
+       height: auto;
+       opacity: 0.6;
+       z-index: 1;
+     }
+   </style>
+    <link href='https://raw.githack.com/UmairAlHasan/Aniwatch24Player/main/netflix%20st.css' rel='stylesheet'/>
+	<title>Aniwatch24</title>
+	</head>
 <body>
-    <!-- Player -->
-    <div id="player"></div>
-    <!-- Download Button -->
-    <button id="download-video-button">Download Video</button>
-    <!-- Include JW Player Script -->
-    <script src="https://raw.githack.com/UmairAlHasan/Aniwatch24Player/main/JWPlayer%20Script%20GitHub.js"></script>
-    <script>
-        const playerInstance = jwplayer("player").setup({
-            controls: true,
-            sharing: false,
-            displaytitle: false,
-            displaydescription: true,
-            abouttext: "Buy Me a Coffee",
-            aboutlink: "@mr_ron168",
-            skin: {
-                name: "netflix"
-            },
-            captions: {
-                color: "#FFF",
-                fontSize: 16,
-                backgroundOpacity: 100,
-                edgeStyle: "uniform"
-            },
-            playlist: [
-                {
-                    title: "Aniwatch24",
-                    description: "Aniwatch24",
-                    image: "",
-                    sources: [
-                        {
-                            file: "https://www.udrop.com/file/LLiG/Kaiju_No._8_Season_1_Episode_2.mp4",
-                            label: "Auto",
-                            default: true
-                        },
-                        {
-                            file: "https://www.udrop.com/file/LLiG/Kaiju_No._8_Season_1_Episode_2.mp4",
-                            label: "1080p"
-                        },
-                        {
-                            file: "https://www.udrop.com/file/LLiG/Kaiju_No._8_Season_1_Episode_2.mp4",
-                            label: "720p"
-                        },
-                        {
-                            file: "https://www.udrop.com/file/LLiG/Kaiju_No._8_Season_1_Episode_2.mp4",
-                            label: "480p"
-                        }
-                    ],
-                    captions: [
-                        {
-                            file: "https://res.cloudinary.com/dzu8cjasr/raw/upload/v1717919707/English_Aniwatch24_Viral_Hit_Season_1_Episode_1_1080p.mp4_DownSub.com_whfyuo.srt",
-                            label: "English",
-                            kind: "captions",
-                            default: true
-                        }
-                    ]
-                }
-            ],
-            advertising: {
-                client: "vast"
-            }
-        });
+      <!-- Include JW Player library -->
+  <!--<img src="https://i.imgur.com/umTyaSP.png" />-->
+  <script src='https://raw.githack.com/UmairAlHasan/Aniwatch24Player/main/JWPlayer%20Script%20GitHub.js' type='text/javascript'></script>
+  <style>
+  #player {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .jwplayer .jw-rightclick .jw-rightclick-list {
+        border-radius: 1px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+</style>
+	<!-- Player -->
+<div id="player"></div>
+<script>
+  const playerInstance = jwplayer("player").setup({
+  controls: true,
+  sharing: false,
+  displaytitle: false,
+  displaydescription: true,
+  abouttext: "Free",
+  aboutlink: "@iamumairhasan7",
+  skin: {
+    name: "netflix"
+  },
+  captions: {
+    color: "#FFF",
+    fontSize: 16,
+    backgroundOpacity: 100,
+    edgeStyle: "uniform"
+  },
+  playlist: [
+    {
+      title: "Aniwatch24",
+      description: "Aniwatch24",
+      image: "",
+      sources: [
+      {
+          file:
+          "https://www.udrop.com/file/LLxE/Solo_Leveling_Season_1_Episode_1.mkv",
+          label: "Auto",
+          default: true
+        },
+        {
+          file:
+            "https://www.udrop.com/file/LLxE/Solo_Leveling_Season_1_Episode_1.mkv",
+          label: "1080p"
+        },
+        {
+          file:
+            "https://www.udrop.com/file/LLxE/Solo_Leveling_Season_1_Episode_1.mkv",
+          label: "720p"
+        },
+        {
+          file:
+            "https://www.udrop.com/file/LLxE/Solo_Leveling_Season_1_Episode_1.mkv",
+          label: "480p"
+        }],
+        captions: [
+        {file:"https://firebasestorage.googleapis.com/v0/b/view-counter-ar.appspot.com/o/%5BEnglish%5D%20%5BAniwatch24%5D%20Viral%20Hit%20Season%201%20Episode%201%201080p.mp4%20%5BDownSub.com%5D.srt?alt=media&token=537e8899-27b1-4ffd-bf75-b9de531aa101",
 
-        // Download Button Functionality
-        const downloadButton = document.getElementById("download-video-button");
-        downloadButton.addEventListener("click", () => {
-            const playlistItem = playerInstance.getPlaylistItem();
-            const fileUrl = playlistItem.file;
-            const downloadName = fileUrl.split("/").pop();
-            const anchor = document.createElement("a");
-            anchor.setAttribute("href", fileUrl);
-            anchor.setAttribute("download", downloadName);
-            anchor.style.display = "none";
-            document.body.appendChild(anchor);
-            anchor.click();
-            document.body.removeChild(anchor);
-        });
-    </script>
+          label: "English",
+          kind: "captions",
+          default: true
+        }],
+    }
+  ],
+  advertising: {
+    client: "vast",
+  }
+});
+playerInstance.on("ready", function () {
+  const buttonId = "download-video-button";
+  const iconPath =
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTMgMTloMTh2Mkgzdi0yem0xMC01LjgyOEwxOS4wNzEgNy4xbDEuNDE0IDEuNDE0TDEyIDE3IDMuNTE1IDguNTE1IDQuOTI5IDcuMSAxMSAxMy4xN1YyaDJ2MTEuMTcyeiIgZmlsbD0icmdiYSgyNDcsMjQ3LDI0NywxKSIvPjwvc3ZnPg==";
+  const tooltipText = "Download";
+  // This function is executed when the button is clicked
+  function buttonClickAction() {
+    const playlistItem = playerInstance.getPlaylistItem();
+    const anchor = document.createElement("a");
+    const fileUrl = playlistItem.file;
+    anchor.setAttribute("href", fileUrl);
+    const downloadName = playlistItem.file.split("/").pop();
+    anchor.setAttribute("download", downloadName);
+    anchor.style.display = "none";
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  }
+  // Move the timeslider in-line with other controls
+  const playerContainer = playerInstance.getContainer();
+  const buttonContainer = playerContainer.querySelector(".jw-button-container");
+  const spacer = buttonContainer.querySelector(".jw-spacer");
+  const timeSlider = playerContainer.querySelector(".jw-slider-time");
+  // Forward 10 seconds
+  const rewindContainer = playerContainer.querySelector(
+
+    ".jw-display-icon-rewind"
+  );
+  const forwardContainer = rewindContainer.cloneNode(true);
+  const forwardDisplayButton = forwardContainer.querySelector(
+    ".jw-icon-rewind"
+  );
+  forwardDisplayButton.style.transform = "scaleX(-1)";
+  forwardDisplayButton.ariaLabel = "Forward 10 Seconds";
+  const nextContainer = playerContainer.querySelector(".jw-display-icon-next");  nextContainer.parentNode.insertBefore(forwardContainer, nextContainer);
+
+  // control bar icon
+  playerContainer.querySelector(".jw-display-icon-next").style.display = "none"; // hide next button
+  const rewindControlBarButton = buttonContainer.querySelector(
+    ".jw-icon-rewind"
+  );
+  const forwardControlBarButton = rewindControlBarButton.cloneNode(true);
+  forwardControlBarButton.style.transform = "scaleX(-1)";
+  forwardControlBarButton.ariaLabel = "Forward 10 Seconds";  rewindControlBarButton.parentNode.insertBefore(
+    forwardControlBarButton,    rewindControlBarButton.nextElementSibling
+  );
+  // add onclick handlers
+  [forwardDisplayButton, forwardControlBarButton].forEach((button) => {
+    button.onclick = () => {     playerInstance.seek(playerInstance.getPosition() + 10);
+    };
+  });
+});
+</script>
 </body>
 </html>
