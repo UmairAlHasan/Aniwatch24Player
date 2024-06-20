@@ -1,0 +1,143 @@
+<div id='top-a3lan'></div>
+<div class='ap-connt post-body entry-content float-container'>
+<script>localStorage.setItem('jwplayer.captionLabel', 'Off');</script><script type='text/javascript' src='/player/jw8/jwplayer.js?v=2'></script>
+                <script type="text/javascript">jwplayer.key="ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyc=";</script>
+                <script src="/js/localstorage-slim.js"></script><script src="https://streamwish.com/js/dnsads.js?adslot=1&AdType=-adimage-&x=-panel_ad_&clicktag=http"></script>
+                <div id='vplayer' style="width:100%;height:100%;text-align:center;"><img src="https://sw-cdn-images.com/vvwvd0u8nc7e_xt.jpg" style="width:100%;height:100%;"></div>
+                <style>
+                .jw-icon-display, .jw-text, .jw-button-color, .jw-time-tip {color:#FA7663 !important;}
+                .jw-time-tip span {background:#FA7663 !important; color: #fff !important;}
+                .jw-featured, .jw-rightclick {display:none !important;}
+                div.jw-icon-rewind {display: none;}
+                </style>
+                
+
+    </div>
+
+
+
+
+<script type='text/javascript'>var uas=[];
+  jwplayer("vplayer").setup({
+	debug: "1",
+    sources: [{file:"https://be28vgi7ri.sw-cdnstream.com/hls2/01/02887/dooxx5diblxr_h/master.m3u8?t=reilBks-GX7WUt-icBA6lAm4o1mKR_RC_OXKPvgOrBY&s=1706862327&e=129600&f=14518983&srv=cqjopqtdozuz&i=0.0&sp=500&p1=cqjopqtdozuz&p2=cqjopqtdozuz&asn=7713"}],
+    image: "https://sw-cdn-images.com/vvwvd0u8nc7e_xt.jpg",
+    width: "100%", 
+    height: "100%",
+    stretching: "uniform",
+    duration: "10444.48",
+    //aspectratio: "16:9",
+    preload: 'auto',
+    //displayPlaybackLabel: true,
+    //horizontalVolumeSlider: true,
+    //allowFullscreen: false,
+    //"autoPause": { "viewability": true, "pauseAds": true },
+    //skin: {controlbar: {text:"#6F6", icons:"#6F6"}, timeslider:{progress:"#6F6"}, menus:{text:"#6F6"} },
+    //pipIcon: 'disabled',
+    skin: {controlbar: {text:"#FA7663", icons:"#FA7663"}, timeslider:{progress:"#FA7663"}, menus:{text:"#FA7663"} },
+    androidhls: "true"
+    ,tracks: [{file: "/dl?op=get_slides&length=10444&url=https://sw-cdn-images.com/vvwvd0u8nc7e0000.jpg", kind: "thumbnails"}]
+    ,captions: { 
+	    			userFontScale: 1, 
+	    			color: '#FFFFFF', 
+	    			backgroundColor: '#303030',
+	    			fontFamily:"Tahoma", 
+	    			backgroundOpacity: 30, 
+	    			fontOpacity: '100',
+    			},"advertising": {"client": "vast", "vpaidmode": "insecure"},'qualityLabels':{"1580":"720p"},abouttext:"StreamWish", aboutlink:"https://streamwish.com",logo: {file:"/wish_dark/images/logo.svg?v=1", link:"https://StreamWish.com", position:"top-left", margin:"5",hide: true},cast: {},playbackRateControls: true, playbackRates: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 2]
+  });
+  if(window.location.hostname == 'video.javdock.com') { top.location = 'https://vidhide.com'; } 
+var vvplay,vvad;
+var vastdone1=0,vastdone2=0,pop3done=0;
+var player = jwplayer();
+var prevt=0, tott=0, v2done=0, lastt=0;
+$.ajaxSetup({ headers: { 'Content-Cache': 'no-cache' } });
+player.on('time', function(x) { 
+    if(5>0 && x.position>=5 && vvad!=1){vvad=1;$('div.video_ad_fadein').fadeIn('slow');}
+    uas.forEach(item => {
+					
+					if (item.time <= x.position && item.loaded == 0) {
+						if (item.xtype == 'vast') {
+							
+							player.playAd(item.link);
+						} else {
+							
+							var a = document.createElement('script');
+							a.src = item.link;
+							document.body.appendChild(a);
+							//alert('pick ads' + item.link);
+						}
+						item.loaded = 1;
+					}
+				});
+    if(x.position>=lastt+5 || x.position<lastt){ lastt=x.position; ls.set('ttvvwvd0u8nc7e', Math.round(lastt), { ttl: 60*60*24*7 }); }
+});
+player.on('seek', function(x) { prevt=x.position; });
+player.on('play', function(x) { doPlay(x); });
+player.on('complete', function() { $('div.video_ad').show(); ls.remove('ttvvwvd0u8nc7e'); });
+player.on('pause', function(x) {  });
+//player.on('all', function(x) { console.log(x); });
+
+function doPlay(x)
+{
+  $('div.video_ad').hide();
+  $('#over_player_msg').hide();
+  if(vvplay)return;
+  vvplay=1;
+  adb=0;
+  if( window.cRAds1 === undefined ){ adb=1; }
+  $.get('/dl?op=view&file_code=vvwvd0u8nc7e&hash=14518983-180-241-1706862327-992b4bc6dbd61e1dda438e39906dd50a&embed=1&referer=&adb='+adb, function(data) {$('#fviews').html(data);} );
+  var lastt = ls.get('ttvvwvd0u8nc7e'); if(lastt>0){ jwplayer().seek( lastt ); }
+}
+
+function set_audio_track()
+{
+  var tracks=player.getAudioTracks(track_name);
+  console.log(tracks);
+  if(tracks.length>1){
+  	for(i=0;i<tracks.length;i++){ if(tracks[i].name==track_name){ console.log('!!='+i); player.setCurrentAudioTrack(i); } }
+  }
+}
+
+    player.on('ready', function(){
+    		
+    });
+
+		player.on("audioTracks",function(event){
+			var tracks=player.getAudioTracks();
+			if(tracks.length<2)return;
+			$('.jw-settings-topbar-buttons').mousedown(function() { 
+			$('#jw-settings-submenu-audioTracks').removeClass('jw-settings-submenu-active');
+			$('.jw-submenu-audioTracks').attr('aria-expanded','false');
+		});
+		player.addButton("/images/dualy.svg","Audio Track",function(){
+			$('.jw-controls').toggleClass('jw-settings-open');
+			$('.jw-settings-captions, .jw-settings-playbackRates').attr('aria-checked','false');
+			if( $('.jw-controls').hasClass('jw-settings-open') ){ 
+				$('.jw-submenu-audioTracks').attr('aria-checked','true');
+				$('.jw-submenu-audioTracks').attr('aria-expanded','true');
+				$('.jw-settings-submenu-quality').removeClass('jw-settings-submenu-active');
+				$('.jw-settings-submenu-audioTracks').addClass('jw-settings-submenu-active');
+			}
+			else {
+				$('.jw-submenu-audioTracks').attr('aria-checked','false');
+				$('.jw-submenu-audioTracks').attr('aria-expanded','false');
+				$('.jw-settings-submenu-audioTracks').removeClass('jw-settings-submenu-active');
+			}
+		},"dualSound");
+		player.on("audioTrackChanged", function(event){ localStorage.setItem('default_audio',event.tracks[event.currentTrack].name);  });
+		if( localStorage.getItem('default_audio') ){ setTimeout("audio_set(localStorage.getItem('default_audio'));", 300 ); }
+		
+	});
+	var current_audio;
+	function audio_set(audio_name)
+	{
+		var tracks=player.getAudioTracks();
+		if(tracks.length>1){
+			for(i=0;i<tracks.length;i++){ if(tracks[i].name==audio_name){ if(i==current_audio){return;} current_audio=i; player.setCurrentAudioTrack(i); } }
+		}
+	}
+
+
+
+</script>
