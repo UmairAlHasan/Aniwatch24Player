@@ -1,5 +1,6 @@
 <div class="content-container" id="content-container">
 <iframe src="" id="content-iframe"></iframe>
+<div class="content-number" id="content-number">Episode: 1</div>
 
   <!-- Episodes Embed by number -->
 <div class="number-container" id="number-container">
@@ -26,64 +27,53 @@
 </div>
 
 
+
 <style>
-         .number-container {
-            background: #fff;
-            color: #000;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px;
-            margin-top: 20px;
-            border: 1px solid #000;
-            border-radius: 1px;
-            padding: 5px;
-            max-height: 150px; /* Adjust as needed */
-            overflow-y: auto;
-        }
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
 
-        .number-container div {
-            width: 50px;
-            height: 35px;
-            display: flex;
-            font-size: 12px;
-            font-weight: bold;
-            justify-content: center;
-            align-items: center;
-            background-color: #ccc;
-            cursor: pointer;
-            border-radius: 5px;
-            border: 1px solid #000;
-        }
+.content-number {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
-        .number-container div:hover {
-            background-color: #ff0000;
-            color: #fff;
-        }
+iframe {
+    width: 80%;
+    height: 500px;
+    border: none;
+    margin-bottom: 20px;
+}
 
-        .active-number {
-            background: white; /* Active selected number background color */
-            color: red; /* Text color for active number */
-        }
+.number-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
 
-        .content-container {
-            position: relative; /* Ensure relative positioning for absolute positioning */
-            width: 100%;
-            height: 250px;
-            padding: 1px;
-            padding-bottom: 50px;
-            border: 1px solid #000;
-            background: none;
-            border-radius: 10px;
-            margin-top: 0px; /* Adjust as needed */
-        }
+.number-container div {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-        .content-container iframe {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-</style>  
+.number-container div:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.number-container div.active {
+    background-color: #28a745;
+}  
+</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -109,5 +99,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (episodeLinks.length > 0) {
         episodeLinks[0].click();
     }
-});   
+});  
 </script>
