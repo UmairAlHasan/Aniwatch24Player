@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+     img {
+       position: absolute;
+       top: 30px;
+       right: 30px;
+       width: 100px;
+       height: auto;
+       opacity: 0.6;
+       z-index: 1;
+     }
+   </style>
+    <link href='https://raw.githack.com/UmairAlHasan/Aniwatch24Player/main/Netflix%20Skin%20v2.0.6.css' rel='stylesheet'/>
+	<title>AR7-Cloud</title>
+</head>
+<body>
+  <script src='https://raw.githack.com/UmairAlHasan/Aniwatch24Player/main/JWPlayer%208.34.1.js' type='text/javascript'></script>
+  <style>
+  #player {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .jwplayer .jw-rightclick .jw-rightclick-list {
+        border-radius: 1px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+</style>
+	<!-- Player -->
+<div id="player"></div>
+<script>
+  const playerInstance = jwplayer("player").setup({
+  controls: true,
+  sharing: false,
+  displaytitle: true,
+  displaydescription: true,
+  abouttext: "Aniwatch24",
+  aboutlink: "https://aniwatch24.xyz",
+  skin: {
+    name: "netflix"
+  },
+  captions: {
+    color: "#FFF",
+    fontSize: 12,
+    backgroundOpacity: 100,
+    edgeStyle: "uniform"
+  },
+  playlist: [
+    {
+      title: "",
+      description: "",
+      image: "",
+      sources: [
+        {
+          file: "https://firebasestorage.googleapis.com/v0/b/view-counter-ar.appspot.com/o/vivo%20V30e%205G%20ADs.mp4?alt=media&token=22e2e1f3-a7da-4acf-991e-ad7c9fc2c35e",
+          label: "Auto",
+          default: true
+        },
+        {
+          file: "/",
+          label: "Japanese"
+        },
+        {
+          file: "/",
+          label: "English"
+        },
+        {
+          file: "/",
+          label: "हिंदी (Hindi)"
+        },
+        {
+          file: "/",
+          label: "اردو (Urdu)"
+        },
+        {
+          file: "/",
+          label: "தமிழ் (Tamil)"
+        },
+        {
+          file: "/",
+          label: "తెలుగు (Telugu)"
+        },
+        {
+          file: "/",
+          label: "മലയാളം (Malayalam)"
+        },
+        {
+          file: "/",
+          label: "한국어 (Korean)"
+        }
+      ],
+      tracks: [
+        {
+          file: "/",
+          kind: "captions",
+          label: "Default",
+          default: true
+        },
+        {
+          file: "/",
+          kind: "captions",
+          label: "Arabic"
+        },
+        {
+          file: "/",
+          kind: "captions",
+          label: "English"
+        },
+        {
+          file: "/",
+          kind: "captions",
+          label: "Hindi"
+        },
+        {
+          file: "/",
+          kind: "captions",
+          label: "Urdu"
+        },
+      ]
+    }
+  ],
+  advertising: {
+    client: "vast",
+    skipoffset: 5,
+    skiptext: "Skip",
+    skipmessage: "Skip this video in  XX",
+    admessage: "The video ends in XX.",
+    schedule: {
+      adbreak1: {
+        offset: "pre",
+        tag: ""
+      },
+      adbreak2: {
+        offset: "720",
+        tag: ""
+      },
+      adbreak3: {
+        offset: "post",
+        tag: ""
+      }
+    }
+  }
+});
+playerInstance.on("ready", function () {
+  const buttonId = "download-video-button";
+  const iconPath =
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTMgMTloMTh2Mkgzdi0yem0xMC01LjgyOEwxOS4wNzEgNy4xbDEuNDE0IDEuNDE0TDEyIDE3IDMuNTE1IDguNTE1IDQuOTI5IDcuMSAxMSAxMy4xN1YyaDJ2MTEuMTd6IiBmaWxsPSJyZ2JhKDI0NywyNDcsMjQ3LDEpIi8+PC9zdmc+";
+  const tooltipText = "Download";
+  function buttonClickAction() {
+    const playlistItem = playerInstance.getPlaylistItem();
+    const anchor = document.createElement("a");
+    const fileUrl = playlistItem.file;
+    anchor.setAttribute("href", fileUrl);
+    const downloadName = playlistItem.file.split("/").pop();
+    anchor.setAttribute("download", downloadName);
+    anchor.style.display = "none";
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  }
+  const playerContainer = playerInstance.getContainer();
+  const buttonContainer = playerContainer.querySelector(".jw-button-container");
+  const spacer = buttonContainer.querySelector(".jw-spacer");
+  const timeSlider = playerContainer.querySelector(".jw-slider-time");
+  const rewindContainer = playerContainer.querySelector(".jw-display-icon-rewind");
+  const forwardContainer = rewindContainer.cloneNode(true);
+  const forwardDisplayButton = forwardContainer.querySelector(".jw-icon-rewind");
+  forwardDisplayButton.style.transform = "scaleX(-1)";
+  forwardDisplayButton.ariaLabel = "Forward 10 Seconds";
+  const nextContainer = playerContainer.querySelector(".jw-display-icon-next");
+  nextContainer.parentNode.insertBefore(forwardContainer, nextContainer);
+  playerContainer.querySelector(".jw-display-icon-next").style.display = "none";
+  const rewindControlBarButton = buttonContainer.querySelector(".jw-icon-rewind");
+  const forwardControlBarButton = rewindControlBarButton.cloneNode(true);
+  forwardControlBarButton.style.transform = "scaleX(-1)";
+  forwardControlBarButton.ariaLabel = "Forward 10 Seconds";
+  rewindControlBarButton.parentNode.insertBefore(forwardControlBarButton, rewindControlBarButton.nextElementSibling);
+  [forwardDisplayButton, forwardControlBarButton].forEach((button) => {
+    button.onclick = () => {
+      playerInstance.seek(playerInstance.getPosition() + 10);
+    };
+  });
+});
+</script>
+</body>
+</html>
